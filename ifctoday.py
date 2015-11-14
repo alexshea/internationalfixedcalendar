@@ -5,7 +5,7 @@ year_wo_leaps = 1970 + (ts/31536000)
 num_leap_years = int((year_wo_leaps-1968)/4)
 years_w_leaps = 1970 + (ts-(num_leap_years*86400))/(31536000)
 currentyear = int(years_w_leaps)
-if int(currentyear) % 4 == 0:
+if currentyear % 4 == 0:
   julianday = int((366 * (years_w_leaps-currentyear))+1)
 else:
   julianday = int((365 * (years_w_leaps-currentyear))+1)
