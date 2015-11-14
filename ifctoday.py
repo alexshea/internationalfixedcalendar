@@ -5,7 +5,7 @@ yearwoleaps = 1970 + (ts/31536000)
 numleapyears = int((yearwoleaps-1968)/4)
 yearswleaps = 1970 + (ts-(numleapyears*86400))/(31536000)
 wholeyears = int(yearswleaps)
-if int(yearswleaps) % 4 == 0:
+if int(wholeyears) % 4 == 0:
   julianday = int((366 * (yearswleaps-wholeyears))+1)
 else:
   julianday = int((365 * (yearswleaps-wholeyears))+1)
