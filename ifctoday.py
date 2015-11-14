@@ -1,19 +1,19 @@
 import time
 
 ts = time.time()
-yearwoleaps = 1970 + (ts/31536000)
-numleapyears = int((yearwoleaps-1968)/4)
-yearswleaps = 1970 + (ts-(numleapyears*86400))/(31536000)
-wholeyears = int(yearswleaps)
-if int(wholeyears) % 4 == 0:
-  julianday = int((366 * (yearswleaps-wholeyears))+1)
+year_wo_leaps = 1970 + (ts/31536000)
+num_leap_years = int((year_wo_leaps-1968)/4)
+years_w_leaps = 1970 + (ts-(num_leap_years*86400))/(31536000)
+currentyear = int(years_w_leaps)
+if int(currentyear) % 4 == 0:
+  julianday = int((366 * (years_w_leaps-currentyear))+1)
 else:
-  julianday = int((365 * (yearswleaps-wholeyears))+1)
+  julianday = int((365 * (years_w_leaps-currentyear))+1)
 
 ifcmonthnum = int(julianday/28)
 ifcdaynum = int(julianday%28)
 
 ifcmonthnum = str(ifcmonthnum)
 ifcdaynum = str(ifcdaynum)
-wholeyears = str(wholeyears)
-print("Today is " + ifcmonthnum + "-" + ifcdaynum + "-" + wholeyears)
+currentyear = str(currentyear)
+print("Today is " + ifcmonthnum + "-" + ifcdaynum + "-" + currentyear)
