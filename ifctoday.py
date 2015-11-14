@@ -6,14 +6,14 @@ num_leap_years = int((year_wo_leaps-1968)/4)
 years_w_leaps = 1970 + (ts-(num_leap_years*86400))/(31536000)
 currentyear = int(years_w_leaps)
 if currentyear % 4 == 0:
-  julianday = int((366 * (years_w_leaps-currentyear))+1)
+  julian = int((366 * (years_w_leaps-currentyear))+1)
 else:
-  julianday = int((365 * (years_w_leaps-currentyear))+1)
+  julian = int((365 * (years_w_leaps-currentyear))+1)
 
-ifcmonthnum = int(julianday/28)
-ifcdaynum = int(julianday%28)
+ifc_month = int(julian/28)
+ifc_day = int(julian%28)
 
-ifcmonthnum = str(ifcmonthnum)
-ifcdaynum = str(ifcdaynum)
+ifc_month = str(ifc_month)
+ifc_day = str(ifc_day)
 currentyear = str(currentyear)
-print("Today is " + ifcmonthnum + "-" + ifcdaynum + "-" + currentyear)
+print("Today is " + ifc_month + "-" + ifc_day + "-" + currentyear)
