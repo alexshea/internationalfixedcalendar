@@ -13,10 +13,10 @@ else:
 ifc_month = int(julian/28)
 ifc_day = int(julian%28)
 
-if ifc_month == 1 and ifc_day == 1
+if ifc_month == 1 and ifc_day == 1:
   print("Today is International Party Day!")
   return 0
-if ifc_month == 14 and ifc_day == 1
+if ifc_month == 14 and ifc_day == 1:
   print("Today is Leap Year Day!")
   return 0
 
