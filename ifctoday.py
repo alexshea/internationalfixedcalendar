@@ -1,6 +1,11 @@
-# Get current day
-import sys
 import time
-
 ts = time.time()
-print(ts)
+yearwoleaps = 1970 + (ts/31536000)
+numleapyears = int((yearwoleaps-1968)/4)
+yearswleaps = 1970 + (ts-(numleapyears*86400))/(31536000)
+wholeyears = int(yearswleaps)
+if int(yearswleaps) % 4 == 0:
+  julianday = int(366 * (yearswleaps-wholeyears)) 
+else:
+  julianday = int(365 * (yearswleaps-wholeyears))
+print(julianday)
